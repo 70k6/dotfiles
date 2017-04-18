@@ -1,0 +1,13 @@
+*.pyc
+*.bin
+local_settings.py
+
+*.o
+
+*.s[a-w][a-z]
+*.un~
+.netrwhist
+*~
+
+.DS_Store
+

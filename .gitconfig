@@ -1,0 +1,35 @@
+[user]
+	name = 70k6
+	email = 70k666@gmail.com
+[core]
+	editor = vim
+	excludesfile = ~/.gitignore
+
+[github]
+  user = 70k6
+
+[color]
+	ui = true
+  diff = auto
+[push]
+	default = current
+[help]
+	autocorrect = true
+[advice]
+  statusHints = false
+[diff]
+    mnemonicprefix = true
+[color "branch"]
+    current = yellow reverse
+    local = yellow
+    remote = green
+[color "diff"]
+    meta = yellow bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
+    whitespace = red reverse
+[color "status"]
+    added = green
+    changed = cyan
+    untracked = red
