@@ -1,6 +1,7 @@
 *.pyc
 *.bin
 local_settings.py
+config.py
 
 *.o
 
