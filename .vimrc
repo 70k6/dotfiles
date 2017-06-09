@@ -24,6 +24,8 @@ set title
 autocmd FileType python setlocal tabstop=4 shiftwidth=4 softtabstop=4 
 autocmd FileType go setlocal tabstop=4 shiftwidth=4 softtabstop=4 
 autocmd BufNewFile,BufReadPost *.styl set filetype=stylus
+autocmd BufNewFile,BufReadPost *.jade set filetype=pug
+autocmd BufNewFile,BufReadPost *.pug set filetype=pug
 
 set wildmenu
 set wildmode=full
