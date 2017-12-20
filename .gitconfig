@@ -1,12 +1,12 @@
 [user]
-	name = 70k6
+	name = 70k666
 	email = 70k666@gmail.com
 [core]
 	editor = vim
 	excludesfile = ~/.gitignore
 
 [github]
-  user = 70k6
+  user = 70k666
 
 [color]
 	ui = true
