@@ -1,6 +1,7 @@
 filetype on
 syntax on
 filetype indent on
+set t_Co=256
 colorschem tomorrow-night
 
 set encoding=utf-8
@@ -21,6 +22,7 @@ set laststatus=2
 set statusline=%t\ %y\ [line:\ %l]\ [col:\ %c]\ [format:\ %{&ff}]
 set title
 
+autocmd FileType make setlocal noexpandtab
 autocmd FileType python setlocal tabstop=4 shiftwidth=4 softtabstop=4 
 autocmd FileType go setlocal tabstop=4 shiftwidth=4 softtabstop=4 
 autocmd BufNewFile,BufReadPost *.styl set filetype=stylus

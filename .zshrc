@@ -71,10 +71,11 @@ alias grep="grep -n --color"
 alias ls='ls -G'
 
 alias chrome="open /Applications/Google\ Chrome.app"
-alias aliyun="ssh root@60.205.211.209"
+alias do="ssh root@159.89.140.29"
 
-export GOPATH='/Users/tokki/go'
-export PATH=$PATH:'/Users/tokki/go/bin'
+
+export GOPATH='/Users/70k/go'
+export PATH=$PATH:'/Users/70k/go/bin'
 
 
 
