@@ -2,7 +2,7 @@ filetype on
 syntax on
 filetype indent on
 set t_Co=256
-colorschem tomorrow-night
+colorschem Tomorrow-Night
 
 set encoding=utf-8
 
