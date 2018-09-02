@@ -77,5 +77,8 @@ alias do="ssh root@159.89.140.29"
 export GOPATH='/Users/70k/go'
 export PATH=$PATH:'/Users/70k/go/bin'
 
+export LC_ALL='en_US.UTF-8'
+export LANG='en_US.UTF-8'
+
 
 
