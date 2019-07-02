@@ -13,7 +13,6 @@ brew install node
 brew cask install iterm2
 brew cask install google-chrome
 brew cask install spectacle
-brew cask install dropbox
-brew cask install astrill
-brew cask install iina
+
+pip3 install yapf
 
