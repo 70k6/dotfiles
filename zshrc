@@ -1,3 +1,4 @@
+source "$HOME/.vim/plugged/gruvbox/gruvbox_256palette.sh"
 setopt CORRECT
 setopt AUTO_PUSHD
 setopt AUTO_NAME_DIRS
@@ -6,6 +7,7 @@ setopt PUSHD_TO_HOME
 setopt PUSHD_IGNORE_DUPS
 setopt ZLE
 setopt NO_HUP
+setopt share_history
 
 autoload -U promptinit
 promptinit
@@ -71,14 +73,16 @@ alias grep="grep -n --color"
 alias ls='ls -G'
 
 alias chrome="open /Applications/Google\ Chrome.app"
-alias do="ssh root@159.89.140.29"
+alias do="ssh root@172.104.100.126"
+alias python=python3
 
 
 export GOPATH='/Users/70k/go'
-export PATH=$PATH:'/Users/70k/go/bin'
+
 
 export LC_ALL='en_US.UTF-8'
 export LANG='en_US.UTF-8'
 
-
+export http_proxy='http://127.0.0.1:1087'
+export https_proxy='http://127.0.0.1:1087'
 

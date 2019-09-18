@@ -1,10 +1,35 @@
 filetype on
 syntax on
 filetype indent on
+call plug#begin('~/.vim/plugged')
+Plug 'Shougo/deoplete.nvim'
+Plug 'roxma/nvim-yarp'
+Plug 'roxma/vim-hug-neovim-rpc'
+Plug 'deoplete-plugins/deoplete-jedi'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'dense-analysis/ale'
+Plug 'Yggdroot/indentLine'
+Plug 'morhetz/gruvbox'
+call plug#end()
+let g:deoplete#enable_at_startup = 1
+
+
+let g:ale_fixers = {
+\   '*': ['remove_trailing_lines', 'trim_whitespace'],
+\   'javascript': ['prettier'],
+\   'css': ['prettier'],
+\   'python': ['yapf'],
+\}
+map <F3> :ALEFix<CR>
+
+let g:airline_theme='simple'
+let g:airline#extensions#ale#enabled = 1
+
+colorschem gruvbox
+set background=dark
 
 set encoding=utf-8
-set background=dark
-colorschem gruvbox
 set number
 set nowrap
 set tabstop=2
@@ -13,17 +38,15 @@ set softtabstop=2
 set expandtab
 set autoindent
 set smartindent
-set guifont=Menlo\ Regular:h13
-set colorcolumn=80
-set textwidth=79
+set colorcolumn=0
+set textwidth=0
 set scrolloff=3
 set ruler
 set laststatus=2
-set statusline=%t\ %y\ [line:\ %l]\ [col:\ %c]\ [format:\ %{&ff}]
 set title
 
 autocmd FileType make setlocal noexpandtab tabstop=4 shiftwidth=4 softtabstop=4 
-autocmd FileType python setlocal tabstop=4 shiftwidth=4 softtabstop=4 
+autocmd FileType python setlocal tabstop=4 shiftwidth=4 softtabstop=4 colorcolumn=80 textwidth=79
 autocmd FileType go setlocal noexpandtab tabstop=8 shiftwidth=8 softtabstop=8 
 autocmd FileType html,htmldjango setlocal tabstop=2 shiftwidth=2 softtabstop=2 
 autocmd FileType coffee,javascript setlocal tabstop=2 shiftwidth=2 softtabstop=2 
@@ -55,28 +78,7 @@ set splitbelow
 set splitright
 
 
-"set pastetoggle=<F5>
-map <F5> :call CompileRun()<CR>
-map <F4> :call FormatRun()<CR>
-func! CompileRun()
-    exec "w"
-    if &filetype == 'python'
-        exec "!time python3 %"
-    elseif &filetype == 'go'
-        exec "!time go run %"
-    endif
-endfunc
-
-func! FormatRun()
-    exec "w"
-    if &filetype == 'python'
-        exec "0,$!yapf"
-    endif
-
-    if &filetype == 'go'
-        exec "0,$!gofmt"
-    endif
-endfunc
+set pastetoggle=<F5>
 
 let mapleader=","
 :command! W w
@@ -84,6 +86,7 @@ let mapleader=","
 
 nmap <leader><space>  :nohlsearch<CR>
 map <leader>s :source ~/.vimrc<CR>
+
 nmap <c-h> <c-w>h
 nmap <c-l> <c-w>l
 nmap <c-j> <c-w>j
