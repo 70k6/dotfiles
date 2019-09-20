@@ -1,6 +1,3 @@
-filetype on
-syntax on
-filetype indent on
 call plug#begin('~/.vim/plugged')
 Plug 'Shougo/deoplete.nvim'
 Plug 'roxma/nvim-yarp'
@@ -29,6 +26,9 @@ let g:airline#extensions#ale#enabled = 1
 colorschem gruvbox
 set background=dark
 
+
+filetype on
+syntax on
 set encoding=utf-8
 set number
 set nowrap
