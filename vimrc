@@ -3,6 +3,7 @@ Plug 'Shougo/deoplete.nvim'
 Plug 'roxma/nvim-yarp'
 Plug 'roxma/vim-hug-neovim-rpc'
 Plug 'deoplete-plugins/deoplete-jedi'
+Plug 'deoplete-plugins/deoplete-go', { 'do': 'make'}
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'dense-analysis/ale'
@@ -10,13 +11,16 @@ Plug 'Yggdroot/indentLine'
 Plug 'morhetz/gruvbox'
 call plug#end()
 let g:deoplete#enable_at_startup = 1
-
+let g:deoplete#sources#go#gocode_binary = $GOPATH.'/bin/gocode'
 
 let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
 \   'javascript': ['prettier'],
+\   'json': ['prettier'],
 \   'css': ['prettier'],
+\   'scss': ['prettier'],
 \   'python': ['yapf'],
+\   'go': ['gofmt'],
 \}
 map <F3> :ALEFix<CR>
 
