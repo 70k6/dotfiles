@@ -73,7 +73,7 @@ alias grep="grep -n --color"
 alias ls='ls -G'
 
 alias chrome="open /Applications/Google\ Chrome.app"
-alias do="ssh root@172.104.100.126"
+alias do="ssh root@172.105.212.117"
 alias python=python3
 
 
