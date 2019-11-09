@@ -4,17 +4,18 @@
 [core]
 	editor = vim
 	excludesfile = ~/.gitignore
-
+[merge]
+  tool = vimdiff
+  conflictstyle = diff3
 [github]
   user = 70k666
-
 [color]
 	ui = true
   diff = auto
 [push]
 	default = current
 [help]
-	autocorrect = true
+	autocorrect = 1
 [advice]
   statusHints = false
 [diff]

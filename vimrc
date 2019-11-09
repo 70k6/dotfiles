@@ -112,3 +112,9 @@ map <down>  <nop>
 map <left>  <nop>
 map <right> <nop>
 
+if &diff
+    map <leader>1 :diffget LOCAL<CR>
+    map <leader>2 :diffget BASE<CR>
+    map <leader>3 :diffget REMOTE<CR>
+endif
+
